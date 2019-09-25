@@ -24,10 +24,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
 
+        var ans = 0.0
+
         try {
             var num1 = editText1.text.toString().toDouble()
             var num2 = editText2.text.toString().toDouble()
-            var ans = 0.0
+
 
             when(v!!.id){
                 R.id.button1 -> ans = num1+num2
@@ -43,7 +45,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
         val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("ans", "ans".toString())
+            intent.putExtra("ans", ans.toString())
             startActivity(intent)
 
     }
