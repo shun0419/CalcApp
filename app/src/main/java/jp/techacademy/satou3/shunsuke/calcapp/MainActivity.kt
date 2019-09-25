@@ -39,13 +39,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Snackbar.make(v!!, "正しい数値を入力してください", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
 
-        }finally {
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("ans1", ans.toString())
-            startActivity(intent)
         }
 
 
+        val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("ans", "ans".toString())
+            startActivity(intent)
 
     }
 }
